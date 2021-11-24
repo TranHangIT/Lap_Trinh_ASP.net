@@ -1,0 +1,9 @@
+﻿
+<div id="menu">
+    <ul>
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active":"")">@Html.ActionLink("Home", "Index", "Home")</li>
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Products" ? "active":"")">@Html.ActionLink("Products", "Products", "Home")</li>
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active":"")">@Html.ActionLink("About", "About", "Home")</li>
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active":"")">@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</div>

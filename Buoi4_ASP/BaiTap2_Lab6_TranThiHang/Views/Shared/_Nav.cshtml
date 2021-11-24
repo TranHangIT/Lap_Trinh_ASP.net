@@ -1,0 +1,8 @@
+﻿<nav id="nav">
+    <ul>
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="Index" ? "active":"")">@Html.ActionLink("HomePage", "Index", "Home")</li>
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="LeftSidebar" ? "active":"")">@Html.ActionLink("Left Sidebar", "LeftSidebar", "Home")</li>
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="RightSidebar" ? "active":"")">@Html.ActionLink("Right Sidebar", "RightSidebar", "Home")</li>
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="NoSidebar" ? "active":"")">@Html.ActionLink("No Sidebar", "NoSidebar", "Home")</li>
+    </ul>
+</nav>

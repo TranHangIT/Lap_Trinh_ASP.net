@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- banner start -->
+<section id="breadcrumb-wrapper" class="breadcrumb-w-img" style="background-image: url(/wwwroot/img/products/bg1.jpg); ">
+
+    <div class="breadcrumb-overlay"></div>
+    <div class="breadcrumb-content">
+        <div class="wrapper">
+            <div style="text-align: center;">
+                <div class="breadcrumb-big">
+                    <h2>
+                        TÀI KHOẢN
+                    </h2>
+
+                </div>
+                <div class="breadcrumb-small">
+                    <a href="@Url.Action("Index","Home")" title="">TRANG CHỦ</a>
+
+
+                    <span aria-hidden="true">/</span>
+                    <span>TÀI KHOẢN</span>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner end -->
+<div class="grocino-form">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+                <form method="post" class="form-signin">
+
+                    <div class="ui form">
+                        <div class="ui left icon input w-100 ">
+                            <h1 style="text-align: center;color:blue;width: 100%;border:rgb(94, 92, 92) solid 2px;border-radius: 4px;height:70px;padding-top: 18px;">ĐĂNG NHẬP</h1>
+
+                        </div>
+
+                        <div class="ui left icon input w-100 field">
+
+                            <input type="text" placeholder="Tên đăng nhập" required />
+                            <i class="uil uil-unlock icon"></i>
+
+                        </div>
+                        <div class="ui left icon input w-100 field">
+
+                            <input type="password" placeholder="Mật khẩu" />
+
+                            <i class="uil uil-unlock icon"></i>
+
+                        </div>
+
+                    </div>
+
+                    <button class="btn btn-orange btn-block" type="submit">ĐĂNG NHẬP</button>
+                    <div class="form-signin__link">
+                        <a href="@Url.Action("Index","Home")">
+                            <p style="font-size: 16px;color:red">Trở về</p>
+                        </a>
+                    </div>
+                    <div class="form-signin__link">
+                        <a href="@Url.Action("DangKy","TaiKhoan")">
+                            <p style="font-size: 16px;color:red">Đăng ký</p>
+                        </a>
+                    </div>
+                    <div class="form-signin__link">
+                        <a href="@Url.Action("DoiMatKhau","TaiKhoan")">
+                            <p style="font-size: 16px;color:red">Quên mật khẩu?</p>
+                        </a>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+

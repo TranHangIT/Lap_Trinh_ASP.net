@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lilypads by FCT</title>
+    <link href="~/wwwroot/css/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo">
+                <h1><a href="#">Lily Pads</a></h1>
+                <h2><span>By Free CSS Templates</span></h2>
+            </div>
+            <!-- end div#logo -->
+        </div>
+        <!-- end div#header -->
+         @{ 
+             Html.RenderPartial("_Menu");
+         }
+        <!-- end div#menu -->
+        <div id="splash"><img src="~/wwwroot/images/img03.jpg" width="940" height="255" alt="" /></div>
+        <div id="page">
+            <div id="page-bgtop">
+                <div id="content">
+                   @RenderBody()
+                </div>
+                <!-- end div#content -->
+                @{ 
+                    Html.RenderPartial("_Sidebar");
+                }
+                <!-- end div#sidebar -->
+                <div style="clear: both; height: 1px"></div>
+            </div>
+        </div>
+        <!-- end div#page -->
+        <div id="footer">
+            <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>. </p>
+            <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+        </div>
+        <!-- end div#footer -->
+    </div>
+    <!-- end div#wrapper -->
+</body>
+</html>

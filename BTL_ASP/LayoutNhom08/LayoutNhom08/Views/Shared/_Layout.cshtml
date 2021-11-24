@@ -1,0 +1,64 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<!-- Mirrored from ocsolutions.co.in/grocerino/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Oct 2021 14:16:18 GMT -->
+<head>
+
+    <title>Hệ Thống Xe máy Hoàng Cầu</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9" />
+
+    <meta name="description" content="Home supermarket" />
+
+    <meta name="author" content="Home Grocerino" />
+
+    @Html.Partial("_Style")
+
+
+</head>
+
+<body class="grocino-home">
+
+    <!-- JS -->
+    @Html.Partial("_Script")
+
+
+    <!-- Top header start -->
+    @Html.Partial("_Navbar");
+    <!-- Start Hero Slide-->
+    <!-- slider -->
+    @RenderSection("slider", required: false)
+    <!-- since -->
+    @RenderBody()
+    <!-- footer -->
+    <!-- End Hero Slide-->
+    <!-- About us start -->
+    <!-- About us end -->
+    <!-- grocino footer start -->
+    <!-- ======= Footer ======= -->
+    @Html.Partial("_Footer")
+    <!-- End Footer -->
+    <!-- mobile menu End -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GF3SVYD2YD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GF3SVYD2YD');
+    </script>
+
+
+</body>
+
+
+<!-- Mirrored from ocsolutions.co.in/grocerino/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Oct 2021 14:17:01 GMT -->
+</html>

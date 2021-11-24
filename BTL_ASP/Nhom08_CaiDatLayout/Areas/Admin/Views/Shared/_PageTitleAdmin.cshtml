@@ -1,0 +1,19 @@
+﻿<div class="pagetitle">
+    <h1> @ViewBag.Title</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">
+                <a href="@Url.Action("Index","Home")">
+                    <b><i class="bi bi-house"></i></b>&nbsp;
+                </a>
+            </li>
+            <li class="breadcrumb-item active">
+                <a href="@Url.Action( @ViewBag.Name ,"Home")">
+       
+                    @ViewBag.Link
+                </a>
+                
+            </li>
+        </ol>
+    </nav>
+</div>

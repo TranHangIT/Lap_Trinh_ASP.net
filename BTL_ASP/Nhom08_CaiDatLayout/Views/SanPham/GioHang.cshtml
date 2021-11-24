@@ -1,0 +1,205 @@
+﻿
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- banner start -->
+<section id="breadcrumb-wrapper" class="breadcrumb-w-img" style=" background-image: url(/wwwroot/img/products/bg1.jpg); ">
+
+    <div class="breadcrumb-overlay"></div>
+    <div class="breadcrumb-content">
+        <div class="wrapper">
+            <div style="text-align: center;">
+                <div class="breadcrumb-big">
+                    <h2>
+                        GIỎ HÀNG
+                    </h2>
+
+                </div>
+                <div class="breadcrumb-small">
+                    <a href="@Url.Action("Index","Home")" title="">TRANG CHỦ</a>
+
+
+                    <span aria-hidden="true">/</span>
+                    <span>GIỎ HÀNG</span>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner end -->
+<!-- cart section start here -->
+
+<div class="cart-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="table-responsive">
+
+                    <table class="table table-borderless">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Sản phẩm</th>
+
+                                <th>Đơn giá</th>
+
+                                <th>Số lượng</th>
+
+                                <th>Thành tiền</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="media">
+
+                                        <div class="img-product">
+
+                                            <img src="~/wwwroot/img/products/hondabeat.png" alt="Product Image" height="150px" />
+
+                                        </div>
+
+                                        <div class="media-body">
+
+                                            <h2>HONDA BEAT</h2>
+
+                                            <span>Phiên bản: Bản đặc biệt/Đen</span>
+
+                                            <span>Thương hiệu: HONDA</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td width="100%" style="text-align: center;">40.000.000đ</td>
+
+                                <td width="100%" style="text-align: center;padding-left: 110px;">
+
+                                    <div class="input-group qty">
+
+                                        <span class="input-group-btn">
+
+                                            <button type="button" class="btn btn-default btn-number bg-green" disabled="disabled" data-type="minus" data-field="quant[1]">
+
+                                                <i class="uil uil-minus"></i>
+
+                                            </button>
+
+                                        </span>
+
+                                        <input type="number" name="quant[1]" class="input-number" value="1" min="1" max="10">
+
+                                        <span class="input-group-btn">
+
+                                            <button type="button" class="btn btn-default btn-number bg-green" data-type="plus" data-field="quant[1]">
+
+                                                <i class="uil uil-plus"></i>
+
+                                            </button>
+
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                                <td width="100%" style="text-align: center;padding-left: 160px;">
+
+                                    <div class="tprice-del">
+
+                                        <span class="total-p">40.000.000đ</span>
+
+                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <div class="cart-detail">
+
+                    <div class="row">
+
+                        <div class="pl-xl-5 col-lg-8 col-md-8 col-sm-12">
+
+
+                            <div class="form-group">
+
+                                <label>Chú thích cho cửa hàng</label>
+
+                                <textarea rows="3" class="form-control"></textarea>
+
+                            </div>
+
+
+
+                            <div class="back">
+
+                                <a href="@Url.Action("Index", "Home")"><i class="fa fa-angle-left fa-lg mr-2"></i> Quay trở lại</a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 ml-auto">
+
+                            <!--<h2>Order summery</h2>
+
+                            <p>Sub Total <span>$150.00</span></p>
+
+                            <p>Tax <span>$25.00</span></p>
+
+                            <hr class="divider">-->
+
+                            <p class="font-medium">Tổng tiền<span>40.000.000đ</span></p>
+
+                            <div class="buttons">
+
+                                <button type="button" class="btn btn-block btn-outline-default"><a href="@Url.Action("GioHang", "SanPham")">Cập nhật giỏ hàng</a></button>
+
+                                <a class="btn btn-block btn-orange" href="@Url.Action("DatHang", "SanPham")">Đặt hàng</a>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- cart section end here -->

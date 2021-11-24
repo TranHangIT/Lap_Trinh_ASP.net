@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+@section scriptslide{
+    <link href="~/wwwroot/libshow/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="~/wwwroot/libshow/js-image-slider.js" type="text/javascript"></script>
+}
+@section header{
+    Trang chủ
+}
+@section SlideShow{
+    <div id="sliderFrame">
+        <div id="slider">
+            <img src="~/wwwroot/libshow/images/image-slider-1.jpg" alt="Welcome to Menucool.com" />
+            <img src="~/wwwroot/libshow/images/image-slider-2.jpg" alt="" />
+            <img src="~/wwwroot/libshow/images/image-slider-3.jpg" alt="Pure Javascript. No jQuery. No flash." />
+            <img src="~/wwwroot/libshow/images/image-slider-4.jpg" alt="#htmlcaption" />
+            <img src="~/wwwroot/libshow/images/image-slider-5.jpg" />
+        </div>
+        <div id="htmlcaption" style="display: none;">
+            <em>HTML</em> caption. Link to <a href="http://www.google.com/">Google</a>.
+        </div>
+    </div>
+}
+
+<p>View sử dụng Layout</p>
+

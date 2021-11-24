@@ -1,0 +1,254 @@
+﻿
+@{
+    ViewBag.Title = "ChiTietSanPham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- banner start -->
+<section id="breadcrumb-wrapper" class="breadcrumb-w-img" style="background-image: url(/wwwroot/img/products/bg1.jpg); ">
+
+    <div class="breadcrumb-overlay"></div>
+    <div class="breadcrumb-content">
+        <div class="wrapper">
+            <div style="text-align: center;">
+                <div class="breadcrumb-big">
+                    <h2>
+                        HONDA BEAT
+                    </h2>
+
+                </div>
+                <div class="breadcrumb-small">
+                    <a href="@Url.Action("Index","Home")" title="Quay trở về trang chủ">TRANG CHỦ</a>
+
+
+                    <span aria-hidden="true">/</span>
+
+
+                    <a href="@Url.Action("XemSanPhamTheoDanhMuc","SanPham")" title="">XE NHẬP KHẨU</a>
+
+
+                    <span aria-hidden="true">/</span>
+                    <span>HONDA BEAT</span>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner end -->
+<!-- Product details page start here -->
+
+<div class="product_details">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="detail_left">
+
+                    <div class="zoom-in">
+
+                        <a href="#">
+
+                            <img src="~/wwwroot/img/products/hondabeat.png" alt="Product Image" />
+
+                        </a>
+
+                    </div>
+
+
+
+                    <ul class="list-inline small_products">
+
+                        <li class="list-inline-item">
+                            <a class="detail_img" href="#">
+
+                                <div class="img-product">
+
+                                    <a href="#">
+
+                                        <img src="~/wwwroot/img/products/honda1.png" alt="Product Image" />
+
+                                    </a>
+
+                                </div>
+
+                        </li>
+
+                        <li class="list-inline-item">
+                            <a class="detail_img" href="#">
+
+                                <div class="img-product">
+
+                                    <a href="#">
+
+                                        <img src="~/wwwroot/img/products/honda2.png" alt="Product Image" />
+
+                                    </a>
+
+                                </div>
+
+                        </li>
+
+                        <li class="list-inline-item">
+                            <a class="detail_img" href="#">
+
+                                <div class="img-product">
+
+                                    <a href="#">
+
+                                        <img src="~/wwwroot/img/products/honda3.png" alt="Product Image" />
+
+                                    </a>
+
+                                </div>
+
+                        </li>
+
+                        <li class="list-inline-item">
+                            <a class="detail_img" href="#">
+
+                                <div class="img-product">
+
+                                    <a href="#">
+
+                                        <img src="~/wwwroot/img/products/honda4.png" alt="Product Image" />
+
+                                    </a>
+
+                                </div>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="detail_right">
+
+                    <h1 style="color: blue;">HONDA BEAT</h1>
+                    <p style="color: red; font-size:25px; font-weight:bold;">35,000,000<u>đ</u></p>
+
+                    <p>Thương hiệu: <span style="color: red;">NHẬP KHẨU</span></p>
+                    <p>Loại: <span style="color: red;">XE TAY GA</span></p>
+                    <p>Tình trạng: <span style="color: red;">Còn hàng</span></p>
+
+                    <p>
+                        Màu sắc:
+                        <button style="width:100px; height: 30px; border-radius: 20px; background-color: black;"><a href="#"></a></button>
+                        <button style="width:100px; height: 30px; border-radius: 20px; background-color: white;"><a href="#"></a></button>
+                        <button style="width:100px; height: 30px; border-radius: 20px; background-color: red;"><a href="#"></a></button>
+                        <button style="width:100px; height: 30px; border-radius: 20px; background-color: blue;"><a href="#"></a></button>
+                    </p>
+
+                    <div class="input-group qty_weight">
+
+                        <p>Số lượng: </p>
+
+                        <span class="d-flex border">
+
+                            <span class="input-group-btn minus">
+
+                                <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+
+                                    <span class="fa fa-minus"></span>
+
+                                </button>
+
+                            </span>
+
+                            <input type="number" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+
+                            <span class="input-group-btn plus">
+
+                                <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+
+                                    <span class="fa fa-plus"></span>
+
+                                </button>
+
+                            </span>
+
+                        </span>
+                        <span class="gop">
+                            <div class="btn-area">
+
+                                <a href="@Url.Action("GioHang","SanPham")" class="btn btn-pcart">
+
+                                    <img src="~/wwwroot/img/home/right-arrow.png" class="arrow-left" alt="Arrow Left"> THÊM VÀO GIỎ
+
+                                </a>
+                                <span>
+                                    <a href="@Url.Action("DatHang", "SanPham")" class="btn btn-pcart">
+
+                                        <img src="~/wwwroot/img/home/right-arrow.png" class="arrow-left" alt="Arrow Left"> MUA NGAY
+
+                                    </a>
+
+                                </span>
+                            </div>
+                        </span>
+
+                    </div>
+
+
+
+
+
+
+
+                    <!-- row -->
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ./table -->
+    #<p></p><table>
+        <tbody>
+            <tr>
+                <th colspan="2">MÔ TẢ SẢN PHẨM</th>
+            </tr>
+            <tr>
+                <td style="width:175px"><p>Khối lượng xe</p></td>
+                <td style="width:249px"><p>93&nbsp;kg</p></td>
+            </tr>
+            <tr><td style="width:175px"><p>Loại động cơ</p></td><td style="width:249px"><p>4 thì, SOHC làm mát bằng không khí, eSP</p></td></tr>
+            <tr><td style="width:175px"><p>Dài x Rộng x cao</p></td><td style="width:249px"><p>1.856 x 666 x 1.068 mm</p></td></tr>
+            <tr><td style="width:175px"><p>Chiều dài cơ sở</p></td><td style="width:249px">1.256 mm</td></tr>
+            <tr><td style="width:175px"><p>Độ cao yên</p></td><td style="width:249px">740 mm</td></tr>
+            <tr><td style="width:175px"><p>Khoảng cách gầm xe</p></td><td style="width:249px">146 mm</td></tr>
+            <tr><td style="width:175px"><p>Đường kính x hành trình piston</p></td><td style="width:249px"><p>50 x 55.1 mm</p></td></tr>
+            <tr><td style="width:175px"><p>Hệ thống phun xăng</p></td><td style="width:249px"><p>PGM-FI</p></td></tr>
+            <tr><td style="width:175px"><p>Loại động cơ</p></td><td style="width:249px"><p>4 thì, SOHC -eSP</p></td></tr>
+            <tr><td style="width:175px"><p>Dung tích xy-lanh</p></td><td style="width:249px"><p>110cc</p></td></tr>
+            <tr><td style="width:175px"><p>Tỉ số nén</p></td><td style="width:249px"><p>9.5 : 1</p></td></tr>
+            <tr><td style="width:175px"><p>Công suất tối đa</p></td><td style="width:249px"><p>6,38 KW (8,68 PS) / 7.500 vòng / phút</p></td></tr>
+            <tr><td style="width:175px"><p>Mô-men xoắn cực đại</p></td><td style="width:249px">9,01 Nm (0,92 kgf.m) / 6.500 vòng / phút</td></tr>
+            <tr><td style="width:175px"><p>Dung tích nhớt máy</p></td><td style="width:249px"><p>0.7L</p></td></tr>
+            <tr><td style="width:175px"><p>Hệ thống khởi động</p></td><td style="width:249px"><p>Điện - Giò đạp</p></td></tr>
+            <tr><td style="width:175px"><p>Hộp số</p></td><td style="width:249px"><p>Tự động</p></td></tr>
+            <tr><td style="width:175px"><p>Phanh trước</p></td>	<td style="width:249px"><p>Đĩa đơn&nbsp;</p></td></tr>
+            <tr><td style="width:175px"><p>Phanh sau</p></td><td style="width:249px"><p>Phanh&nbsp;đùm</p></td></tr>
+            <tr><td style="width:175px"><p>Phuộc trước</p></td><td style="width:249px">&nbsp;Ống lồng</td></tr>
+            <tr><td style="width:175px"><p>Phuộc sau</p></td><td style="width:249px"><p>Giảm sóc đơn</p></td></tr>
+            <tr><td style="width:175px"><p>Kích cỡ lốp trước/sau</p></td><td style="width:249px"><p>80/90 - 14 M / C 40P/&nbsp;90/90 - 14 M / C 46P)</p></td></tr>
+            <tr><td style="width:175px"><p>Dung tích bình xăng</p></td><td style="width:249px"><p>4 lít</p></td></tr>
+        </tbody>
+    </table>
+    <!-- ./table -->
+
+</div>
+
+</div>
+
+

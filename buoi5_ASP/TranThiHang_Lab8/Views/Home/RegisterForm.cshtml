@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "RegisterForm";
+}
+
+<h2>Đăng kí thành viên</h2>
+@{ Html.BeginForm("Register", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }); }
+
+<p>
+    <div>Họ và tên</div>
+    @Html.TextBox("FullName")
+</p> <p>
+    <div>Mật khẩu</div>
+    @Html.Password("Password")
+</p>
+<p>
+    <div>Ảnh</div>
+    <input name="ImageFile" type="file" />
+</p>
+<p>
+    <div>Tình trạng hôn nhân</div>
+    <label>	@Html.CheckBox("Single", true) Độc thân</label>
+</p>
+<p>
+    <div>Giới tính</div>
+    <label>@Html.RadioButton("Gender", "Nam", true) Nam</label>
+    <label>@Html.RadioButton("Gender", "Nữ", false) Nữ</label>
+
+</p>
+<p>
+    <div>Tỉnh/Thành phố</div>
+    @Html.DropDownList("City", new SelectList(ViewBag.Cities), "- Chọn tỉnh -")
+</p>
+<p>
+    <div>Mô tả</div>
+    @Html.TextArea("Description")
+</p>
+<p>
+    @Html.Hidden("Active", "Hoạt động")
+</p>
+
+<hr />
+<input type="submit" value="Gửi đăng ký" />
+@{ Html.EndForm(); }
+

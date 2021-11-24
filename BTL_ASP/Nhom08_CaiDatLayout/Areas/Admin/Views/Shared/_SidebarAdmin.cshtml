@@ -1,0 +1,49 @@
+﻿<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active": "" )" href="@Url.Action("Index","Home")">
+                <i class="bi bi-grid"></i>
+                <span>Thống kê</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "QuanlyDanhmucSanpham" ? "active": "" ) " href="@Url.Action("QuanlyDanhmucSanpham","Home")">
+                <i class="bi bi-folder2-open"></i>
+                <span>Quản lý danh mục</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "QuanlySanpham" ? "active": "" ) " href="@Url.Action("QuanlySanpham","Home")">
+                <i class="bi bi-box-seam"></i>
+                <span>Quản lý sản phẩm</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "QuanlyDonhang" ? "active": "" ) " href="@Url.Action("QuanlyDonhang","Home")">
+                <i class="bi bi-bag"></i>
+                <span>Quản lý đơn hàng</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "QuanlyTaikhoan" ? "active": "" ) " href="@Url.Action("QuanlyTaikhoan","Home")">
+                <i class="bi bi-person-circle"></i>
+                <span>Quản lý tài khoản</span>
+            </a>
+        </li>
+
+
+
+        <li class="nav-heading">Pages</li>
+
+        <li class="nav-item">
+            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "ThongtinDangnhap" ? "active": "" ) " href="@Url.Action("ThongtinDangnhap","Home")">
+                <i class="bi bi-file-earmark"></i>
+                <span>Thông tin</span>
+            </a>
+        </li><!-- End Blank Page Nav -->
+
+    </ul>
+
+</aside>

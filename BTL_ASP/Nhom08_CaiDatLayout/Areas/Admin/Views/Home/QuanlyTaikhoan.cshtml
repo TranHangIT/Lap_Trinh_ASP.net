@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Tài khoản";
+    ViewBag.Link = "Quản lý tài khoản";
+    ViewBag.Name = "QuanlyTaikhoan";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section CSSPartial{
+    <link href="~/Areas/Admin/Assets/css/table.css" rel="stylesheet">
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr class="text-center">
+                    <th>STT</th>
+                    <th> Họ và tên</th>
+                    <th>Tên đăng nhập</th>
+                    <th>Số điện thoại </th>
+                    <th>Trạng thái</th>
+                    <th>Quyền</th>
+
+                    <th colspan="2">Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                    <th>1</th>
+                    <td>Nguyễn Hà Hương Dịu</td>
+                    <td>nguyendiu</td>
+                    <td>0373317718</td>
+                    <td>Hoạt động</td>
+                    <td>Quản trị</td>
+
+                    <td title="Sửa tài khoản" class="edit"><i class="bi bi-pencil-fill"></i></td>
+                    <td title="Xóa tài khoản" class="remove"><i class="bi bi-trash-fill"></i></td>
+                </tr>
+                <tr class="text-center">
+                    <th>2</th>
+                    <td>Trần Thị Hằng</td>
+                    <td>tranhang</td>
+                    <td>0373517718</td>
+                    <td>Khóa</td>
+                    <td>Quản trị</td>
+
+                    <td title="Sửa tài khoản" class="edit"><i class="bi bi-pencil-fill"></i></td>
+                    <td title="Xóa tài khoản" class="remove"><i class="bi bi-trash-fill"></i></td>
+                </tr>
+                <tr class="text-center">
+                    <th>3</th>
+                    <td>Phạm Thị Hoài</td>
+                    <td>phamhoai</td>
+                    <td>0393317718</td>
+                    <td>Khóa</td>
+                    <td>Khách hàng</td>
+
+                    <td title="Sửa tài khoản" class="edit"><i class="bi bi-pencil-fill"></i></td>
+                    <td title="Xóa tài khoản" class="remove"><i class="bi bi-trash-fill"></i></td>
+                </tr>
+                <tr class="text-center">
+                    <th>4</th>
+                    <td>Hà Thị Huệ</td>
+                    <td>hahue</td>
+                    <td>0973317718</td>
+                    <td>Khóa</td>
+                    <td>Khách hàng</td>
+                    <td title="Sửa tài khoản" class="edit"><i class="bi bi-pencil-fill"></i></td>
+                    <td title="Xóa xóa tài khoản" class="remove"><i class="bi bi-trash-fill"></i></td>
+                </tr>
+                <tr class="text-center">
+                    <th>5</th>
+                    <td>Nguyễn Thị Huyền Trang</td>
+                    <td>nguyentrang</td>
+                    <td>0373217718</td>
+                    <td>Hoạt động</td>
+                    <td>Quản trị</td>
+                    <td title="Sửa tài khoản" class="edit"><i class="bi bi-pencil-fill"></i></td>
+                    <td title="Xóa tài khoản" class="remove"><i class="bi bi-trash-fill"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

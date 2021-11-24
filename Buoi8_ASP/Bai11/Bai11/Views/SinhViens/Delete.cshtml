@@ -1,0 +1,101 @@
+﻿@model Bai11.Models.SinhVien
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xóa sinh viên - Trần Thị Hằng</h2>
+
+<h3>Bạn có chắc muốn xóa bản ghi này?</h3>
+<div>
+    <h4>SinhVien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DienThoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DienThoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Anh)
+        </dt>
+
+        <dd>
+            @{
+                // Lấy đường dẫn file ảnh
+                string ImagePath = "~/wwwroot/Images/" + Model.Anh;
+            }
+            <img src="@Url.Content(ImagePath)" width="300" class="img-thumbnail" />
+            <br />
+            @Html.DisplayFor(model => model.Anh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatKhau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatKhau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>
+
+@if (ViewBag.Error != null)
+{
+    <br />
+    <div class="alert alert-danger" role="alert">@ViewBag.Error</div>
+}

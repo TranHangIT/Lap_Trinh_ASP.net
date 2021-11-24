@@ -1,0 +1,68 @@
+﻿<div class="navbar-area">
+    <div class="mobile-nav">
+        <a href="@Url.Action("Index","Home")" title="Rượu Tây chính hãng; ruoutay.com" rel="home" class="logo">
+            <img src="~/wwwroot/img/giano-logo.png" alt="Rượu tây chính hãng; ruoutay.com">
+        </a>
+    </div>
+    <div class="main-nav giano-nav-two">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                    <img src="~/wwwroot/img/giano-logo.png" alt="Rượu tây chính hãng; ruoutay.com">
+                </a>
+                <!-- menu -->
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" style="display: block;">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            @Html.ActionLink("Trang chủ", "Index", "Home")
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Whisky", "XemSanPhamTheoDanhMuc", "SanPham")
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Cognac", "XemSanPhamTheoDanhMuc", "SanPham")
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Vodka", "XemSanPhamTheoDanhMuc", "SanPham")
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Rượu Mùi", "XemSanPhamTheoDanhMuc", "SanPham")
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Champagne/Vang", "XemSanPhamTheoDanhMuc", "SanPham")
+                        </li>
+                        </li>
+                    </ul>
+                    <div class="other-option">
+                        <ul>
+                            <li class="search-field">
+                                <input style="border-radius: 13px" type="text" placeholder="  Tìm kiếm"
+                                       spellcheck="false" data-ms-editor="true">
+                                <button style="border-radius: 13px" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </li>
+
+                            <li class="default-btn"
+                                style="width: 72px; height: 53px; padding: 6px 1px 0px 21px; border-radius:6px">
+                                <a href="@Url.Action("GioHang","SanPham")" title="Giỏ hàng" rel="home">
+                                    <img style="width:40px; height:40px; border-radius: 15%"
+                                         src="~/wwwroot/img/cart/shopping_cart1.png" alt="Giỏ hàng">
+                                </a>
+                            </li>
+                            <li class="sidbar-menu">
+                                <a href="@Url.Action("Index","Home")" data-bs-toggle="modal" data-bs-target="#myModal2"
+                                   class="burgar-menu">
+                                    <i class="flaticon-menu"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>

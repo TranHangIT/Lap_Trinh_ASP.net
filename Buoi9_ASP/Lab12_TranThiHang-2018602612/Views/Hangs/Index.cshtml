@@ -1,0 +1,90 @@
+﻿@model PagedList.IPagedList<BaiTap12.Models.Hang>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách hàng</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        Tìm mặt hàng: @Html.TextBox("searchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Tìm" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            Mã hàng
+        </th>
+        <th>
+            @Html.ActionLink("Tên hàng", "Index", new { sortOrder = ViewBag.SapTheoTen, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Giá", "Index", new { sortOrder = ViewBag.SapTheoGia, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            Hình ảnh
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Nha_CC.TenNCC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LuongCo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoTa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChietKhau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HinhAnh)
+            </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaHang)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.TenHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gia)
+            </td>
+
+            <td>
+                @{
+                    string ImagePath = "~/wwwroot/images/" + item.HinhAnh;
+                }
+                <img src="@Url.Content(ImagePath)" width="100" class="img-thumbnail" />
+                <br />
+                @Html.DisplayFor(modelItem => item.HinhAnh)
+            </td>
+            <td>
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MaHang.Trim() }) |
+                @Html.ActionLink("Thêm vào giỏ", "Delete", new { id = item.MaHang.Trim() })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+Trang @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber)/ @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentFilter, currentFilter = ViewBag.CurrentFilter }))

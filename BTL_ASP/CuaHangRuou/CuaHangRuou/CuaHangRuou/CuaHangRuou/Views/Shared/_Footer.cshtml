@@ -1,0 +1,68 @@
+﻿<footer class="footer-top-area pt-100">
+    <div class="container">
+        <div class="row footer-wrapper">
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="single-widget">
+                    <a class="brand" href="@Url.Action("Index","Home")">
+                        <img src="~/wwwroot/img/footer-logo.png" alt="footer-logo">
+                    </a>
+                    <p>
+                        Mô tả công ty
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="single-widget single-widgets">
+                    <h3>Tài Khoản</h3>
+                    <ul>
+                        <li>@Html.ActionLink("Đăng nhập", "DangNhap", "TaiKhoan")</li>
+                        <li>@Html.ActionLink("Đăng ký", "DangKy", "TaiKhoan")</li>
+                        <li>@Html.ActionLink("Sủa tài khoản", "SuaTaiKhoan", "TaiKhoan")</li>
+                        <li>@Html.ActionLink("Đổi mật khẩu", "DoiMatKhau", "TaiKhoan")</li>
+                        <li>@Html.ActionLink("Đăng xuất", "Index", "Home")</li>
+                        
+                        <li>@Html.ActionLink("Giỏ hàng", "GioHang", "SanPham")</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="single-widget">
+                    <h3>Liên hệ</h3>
+                    <ul>
+                        <li class="address">
+                            <i class="fa fa-map-marker"></i>
+                            Minh Khai, Bấc Từ Liêm, Hà Nội
+                        </li>
+                        <li class="address">
+                            <i class="fa fa-phone"></i>
+                            <span>+84899999999</span>
+                        </li>
+
+                        <li class="address">
+                            <i class="fa fa-envelope"></i>
+                            <span class="__cf_email__">ruoutay.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-bottom">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div>
+                    <p>
+                        Copyright <i class="fa fa-copyright"></i>2021 Giano. Designed By
+                        <a href="https://envytheme.com/" target="_blank">EnvyTheme</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <ul class="terms-conditions">
+                    <li>@Html.ActionLink("Terms & Conditions", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Privacy Policy", "Index", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

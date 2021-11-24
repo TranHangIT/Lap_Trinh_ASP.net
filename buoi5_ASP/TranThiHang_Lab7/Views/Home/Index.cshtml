@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>Đăng ký</h1>
+        <form action="/Home/Register" method="post">
+            <div>Mã</div><input name="Id" />
+            <div>Họ tên</div><input name="Name" />
+            <div>Điểm</div><input name="Mark" />
+            <hr />
+            <input type="submit" value="Đăng ký" />
+        </form>
+        <br />
+        <a href="/Home/Register?Id=15&Name=Hằng&Mark=8.5">Dùng Query string</a>
+    </div>
+</body>
+</html>

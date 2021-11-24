@@ -1,0 +1,302 @@
+﻿
+@{
+    ViewBag.Title = "TimKiemSanPham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- banner start -->
+<section id="breadcrumb-wrapper" class="breadcrumb-w-img" style="background-image: url(/wwwroot/img/products/bg1.jpg); ">
+
+    <div class="breadcrumb-overlay"></div>
+    <div class="breadcrumb-content">
+        <div class="wrapper">
+            <div style="text-align: center;">
+                <div class="breadcrumb-big">
+                    <h2 >
+                        TÌM KIẾM
+                    </h2>
+
+                </div>
+                <div class="breadcrumb-small">
+                    <a href="@Url.Action("Index","Home")" title="">TRANG CHỦ</a>
+
+
+                    <span aria-hidden="true">/</span>
+                    <span>TÌM KIẾM</span>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<div style="text-align:center;">
+    <h2 style="color:black">
+        KẾT QUẢ TÌM KIẾM
+        <br />
+        TẤT CẢ SẢN PHẨM/TỪ KHÓA: HONDA
+    </h2>
+    <a class="nav-link scrollto search">
+        <form>
+            <input type="text" name="txtKeyword" style="border-radius: 15px;" placeholder="Tìm kiếm ..." />
+            <i class="fas fa-search icons" style="font-size: 20px;margin-left: 0px; "></i>
+        </form>
+    </a>
+</div>
+<!-- banner end -->
+<div class="category-section1">
+    <div class="container">
+        <div id="category-filter">
+            <div class="row">
+                <div class="row filter-products">
+                    <div class="product-layout product-grid col-12 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="product-holder product-thumb">
+                            <div class="image">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham")">
+                                    <div class="img-product">
+                                        <img src="~/wwwroot/img/products/hondabeat.png" class="img-fluid" alt="Product Image" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title"> <a href="@Url.Action("ChiTietSanPham","SanPham")"> HONDA BEAT </a></div><hr>
+                                <div class="p-price" style="color: red; font-weight:bolder;">
+
+                                    35,500,000 <u>đ</u>
+
+                                </div>
+                                <div class="p-buttonarea">
+
+                                    <a href="@Url.Action("GioHang","SanPham")" class="btn btn-pcart">
+
+                                        <img src="~/wwwroot/img/home/right-arrow.png" class="arrow-left" alt="Arrow Left" /> THÊM VÀO GIỎ
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-layout product-grid col-12 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="product-holder product-thumb">
+                            <div class="image">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham")">
+                                    <div class="img-product">
+                                        <img src="~/wwwroot/img/products/hondagenio.png" class="img-fluid" alt="Product Image" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title"> <a href="@Url.Action("ChiTietSanPham","SanPham")"> HONDA GENIO </a></div><hr>
+                                <div class="p-price" style="color: red; font-weight:bolder;">
+
+                                    37,000,000 <u>đ</u>
+
+                                </div>
+                                <div class="p-buttonarea">
+
+                                    <a href="@Url.Action("GioHang","SanPham")" class="btn btn-pcart">
+
+                                        <img src="~/wwwroot/img/home/right-arrow.png" class="arrow-left" alt="Arrow Left" /> THÊM VÀO GIỎ
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-layout product-grid col-12 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="product-holder product-thumb">
+                            <div class="image">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham")">
+                                    <div class="img-product">
+                                        <img src="~/wwwroot/img/products/hondascoopy.png" class="img-fluid" alt="Product Image" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title"> <a href="@Url.Action("ChiTietSanPham","SanPham")"> HONDA SCOOPY </a></div><hr>
+                                <div class="p-price" style="color: red; font-weight:bolder;">
+
+                                    38,500,000 <u>đ</u>
+
+                                </div>
+                                <div class="p-buttonarea">
+
+                                    <a href="@Url.Action("GioHang","SanPham")" class="btn btn-pcart">
+
+                                        <img src="~/wwwroot/img/home/right-arrow.png" class="arrow-left" alt="Arrow Left" /> THÊM VÀO GIỎ
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-layout product-grid col-12 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="product-holder product-thumb">
+                            <div class="image">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham")">
+                                    <div class="img-product">
+                                        <img src="~/wwwroot/img/products/hondasonic.png" class="img-fluid" alt="Product Image" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title"> <a href="@Url.Action("ChiTietSanPham","SanPham")"> HONDA SONIC </a></div><hr>
+                                <div class="p-price" style="color: red; font-weight:bolder;">
+
+                                    55,000,000 <u>đ</u>
+
+                                </div>
+                                <div class="p-buttonarea">
+
+                                    <a href="@Url.Action("GioHang","SanPham")" class="btn btn-pcart">
+
+                                        <img src="~/wwwroot/img/home/right-arrow.png" class="arrow-left" alt="Arrow Left" /> THÊM VÀO GIỎ
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-layout product-grid col-12 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="product-holder product-thumb">
+                            <div class="image">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham")">
+                                    <div class="img-product">
+                                        <img src="~/wwwroot/img/products/hondavario.png" class="img-fluid" alt="Product Image" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title"> <a href="@Url.Action("ChiTietSanPham","SanPham")"> HONDA VARIO 125 </a></div><hr>
+                                <div class="p-price" style="color: red; font-weight:bolder;">
+
+                                    39,000,000 <u>đ</u>
+
+                                </div>
+                                <div class="p-buttonarea">
+
+                                    <a href="@Url.Action("GioHang","SanPham")" class="btn btn-pcart">
+
+                                        <img src="~/wwwroot/img/home/right-arrow.png" class="arrow-left" alt="Arrow Left" /> THÊM VÀO GIỎ
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-layout product-grid col-12 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="product-holder product-thumb">
+                            <div class="image">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham")">
+                                    <div class="img-product">
+                                        <img src="~/wwwroot/img/products/yamahamxking.png" class="img-fluid" alt="Product Image" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title"> <a href="@Url.Action("ChiTietSanPham","SanPham")"> YAMAHA MX-KING </a></div><hr>
+                                <div class="p-price" style="color: red; font-weight:bolder;">
+
+                                    47,000,000 <u>đ</u>
+
+                                </div>
+                                <div class="p-buttonarea">
+
+                                    <a href="@Url.Action("GioHang","SanPham")" class="btn btn-pcart">
+
+                                        <img src="~/wwwroot/img/home/right-arrow.png" class="arrow-left" alt="Arrow Left" /> THÊM VÀO GIỎ
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-layout product-grid col-12 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="product-holder product-thumb">
+                            <div class="image">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham")">
+                                    <div class="img-product">
+                                        <img src="~/wwwroot/img/products/yamaha1.png" class="img-fluid" alt="Product Image" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title"> <a href="@Url.Action("ChiTietSanPham","SanPham")"> YAMAHA MT-15 </a></div><hr>
+                                <div class="p-price" style="color: red; font-weight:bolder;">
+
+                                    70,000,000 <u>đ</u>
+
+                                </div>
+                                <div class="p-buttonarea">
+
+                                    <a href="@Url.Action("GioHang","SanPham")" class="btn btn-pcart">
+
+                                        <img src="~/wwwroot/img/home/right-arrow.png" class="arrow-left" alt="Arrow Left" /> THÊM VÀO GIỎ
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-layout product-grid col-12 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="product-holder product-thumb">
+                            <div class="image">
+                                <a href="@Url.Action("ChiTietSanPham","SanPham")">
+                                    <div class="img-product">
+                                        <img src="~/wwwroot/img/products/yamaha2.png" class="img-fluid" alt="Product Image" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title"> <a href="@Url.Action("ChiTietSanPham","SanPham")"> YAMAHA R15 </a></div><hr>
+                                <div class="p-price" style="color: red; font-weight:bolder;">
+
+                                    71,500,000 <u>đ</u>
+
+                                </div>
+                                <div class="p-buttonarea">
+
+                                    <a href="@Url.Action("GioHang","SanPham")" class="btn btn-pcart">
+
+                                        <img src="~/wwwroot/img/home/right-arrow.png" class="arrow-left" alt="Arrow Left" /> THÊM VÀO GIỎ
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <ul class="pagination">
+                    <li class="page-item active"><a class="page-link" href="@Url.Action("XemSanPhamTheoDanhMuc","SanPham")">1</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("XemSanPhamTheoDanhMuc","SanPham")">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("XemSanPhamTheoDanhMuc","SanPham")"><i class="fa fa-angle-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

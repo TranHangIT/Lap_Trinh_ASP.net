@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @RenderSection("scriptslide", required:false)
+</head>
+<body>
+    <table>
+        <img src="~/wwwroot/images/oreilly_header.gif" />
+        <img src="~/wwwroot/images/oranet_logo.jpg" />
+        <tr>
+            <td><button>@Html.ActionLink("Trang chủ", "Index", "Home")</button></td>
+            <td><button>@Html.ActionLink("Giới thiệu", "About", "Home")</button></td>
+            <td><button>@Html.ActionLink("Liên hệ", "Contact", "Home")</button></td>
+        </tr>
+    </table>
+
+    <hr />
+    <div>
+        <h1>@RenderSection("header",required:true)</h1>
+        @RenderSection("SlideShow", required:false)
+        @RenderBody()
+    </div>
+    <hr />
+    <h4>Copyright &copy; 2020 - Học lập trình web</h4>
+</body>
+</html>

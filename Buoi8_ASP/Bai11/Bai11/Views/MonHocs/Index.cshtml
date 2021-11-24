@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Bai11.Models.MonHoc>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách môn học - Trần Thị Hằng</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoTinChi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoDangKy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenMon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoTinChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoDangKy)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.MaMon.Trim() }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MaMon.Trim() }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MaMon.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

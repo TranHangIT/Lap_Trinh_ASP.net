@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" lang="vi">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/theme/ditacom_index.css">
+    <link rel="stylesheet" href="css/theme/ditacom_pulic.css">
+    <style type="text/css">
+        /*shopping.html*/
+        @media (max-width: 780px) {
+            .shopping_01_mb {
+                display: block !important
+            }
+
+            .shopping_01 {
+                display: none;
+                float: right;
+                background: #F3F3F3;
+                box-shadow: 0 0 2px #999999;
+                height: 30px;
+                padding: 5px 5px 0px 5px;
+                margin: 5px 0px;
+                margin-bottom: 10px
+            }
+
+                .shopping_01 span {
+                    float: left;
+                    padding-top: 4px;
+                    padding-right: 10px;
+                    text-transform: uppercase !important;
+                    white-space: nowrap
+                }
+
+                .shopping_01 strong {
+                    float: left;
+                    padding-top: 4px
+                }
+
+                .shopping_01 img {
+                    float: right;
+                    width: 35px !important;
+                    padding-left: 5px
+                }
+        }
+
+        @media (min-width: 781px) and (max-width: 979px) {
+            .shopping_01_ipad {
+                display: block !important
+            }
+
+            .shopping_01 {
+                display: none;
+                float: right;
+                background: #F3F3F3;
+                box-shadow: 0 0 2px #999999;
+                height: 30px;
+                padding: 5px 5px 0px 5px;
+                margin: 5px 0px;
+                margin-bottom: 10px
+            }
+
+                .shopping_01 span {
+                    float: left;
+                    padding-top: 4px;
+                    padding-right: 10px;
+                    text-transform: uppercase !important;
+                    white-space: nowrap
+                }
+
+                .shopping_01 strong {
+                    float: left;
+                    padding-top: 4px
+                }
+
+                .shopping_01 img {
+                    float: right;
+                    width: 35px !important;
+                    padding-left: 5px
+                }
+        }
+
+        @media (min-width: 980px) and (max-width: 1080px) {
+            .shopping_01_ipad {
+                display: block !important
+            }
+
+            .shopping_01 {
+                display: none;
+                float: right;
+                background: #F3F3F3;
+                box-shadow: 0 0 2px #999999;
+                height: 30px;
+                padding: 5px 5px 0px 5px;
+                margin: 5px 0px;
+                margin-bottom: -10px
+            }
+
+                .shopping_01 span {
+                    float: left;
+                    padding-top: 4px;
+                    padding-right: 10px;
+                    text-transform: uppercase !important;
+                    white-space: nowrap
+                }
+
+                .shopping_01 strong {
+                    float: left;
+                    padding-top: 4px
+                }
+
+                .shopping_01 img {
+                    float: right;
+                    width: 35px !important;
+                    padding-left: 5px
+                }
+        }
+
+        @media (min-width: 1081px) {
+            .shopping_01_pc {
+                display: block !important
+            }
+
+            .shopping_01 {
+                display: none;
+                float: right;
+                background: #F3F3F3;
+                box-shadow: 0 0 2px #999999;
+                height: 50px;
+                padding: 5px 5px 0px 5px;
+                margin-bottom: -65px
+            }
+
+                .shopping_01 span {
+                    float: left;
+                    padding-top: 12px;
+                    padding-right: 10px;
+                    text-transform: uppercase !important;
+                    white-space: nowrap
+                }
+
+                .shopping_01 strong {
+                    float: left;
+                    padding-top: 12px
+                }
+
+                .shopping_01 img {
+                    float: right;
+                }
+
+            @media (max-width: 780px) {
+                #dita_cat_left {
+                    width: 100%;
+                    float: right
+                }
+
+                #display_cat_img {
+                    display: none
+                }
+
+                .dita_input_width {
+                    width: 100%;
+                }
+            }
+
+            .chuyen_khoan {
+                border: 1px solid black;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+                .chuyen_khoan tr {
+                    border: 1px solid black;
+                }
+
+                .chuyen_khoan td {
+                    border: 1px solid black;
+                    line-height: 25px;
+                    padding: 5px;
+                }
+        }
+    </style>
+</head>
+<body class="bg_full">
+    <!-------------------------------------header--------------------------------------------->
+    <section class="section_all top_full" id="page_bg">
+        <div class="div_index" id="page_width">
+            <article class="article_center">
+                <div class="index_top top_full">
+                    <div class="header_lang">
+                        <a href="../BackEnd/Login/signin.html" title=""> Đăng Ký </a> |
+                        <a href="../BackEnd/Login/login.html" title=""> Đăng Nhập </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-------------------------------------menu--------------------------------------------->
+    <section class="section_all menu_full" id="page_bg">
+        <div class="div_index" id="page_width">
+            <article class="article_center">
+                <div class="index_info menu_full">
+                    <div class="index_header">
+                        <div class="index_header_left">
+                            <!-- href home -->
+                            <a href="index.html" title="" style="float:left; margin-top:-10px; margin-bottom:10px">
+                                <img src="image/logo-hsv.svg" alt="tinhdaulachampa.net" title="" />
+                            </a>
+                        </div>
+                        <div class="index_header_right">
+                            <div class="shopping_01 shopping_01_pc shopping_01_ipad shopping_01_ipad shopping_01_mb">
+                                <a href="GioHang.html">
+                                    <span>Giỏ hàng</span> <strong>0</strong>
+                                    <img src="image/gio_hang.png" alt="" />
+                                </a>
+                            </div>
+                            <ul class="ul_menu_pc" id="none_display_mb">
+                                <li class="ul_menu_pc_border">
+                                    <a href="index.html" title="Trang chủ">Trang chủ</a>
+                                </li>
+                                <li class="ul_menu_pc_border">
+                                    <a title="Giới thiệu" href="#">Giới thiệu </a>
+                                </li>
+                                <li class="ul_menu_pc_border">
+                                    <a title="Sản phẩm" href="index.html">Sản phẩm </a>
+                                    <ul class="mn_child ul_menu_pc_ul">
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Tinh Dầu Nguyên Chất</a>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Tinh dầu từ thân, lá</a></p>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Tinh dầu từ hoa</a></p>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Tinh dầu từ vỏ, quả, hạt</a></p>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Tinh dầu từ gỗ</a></p>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Tinh dầu hỗn hợp</a></p>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Tinh Dầu Thơm Que Gỗ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Máy Khuếch Tán Tinh Dầu</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Đèn Xông Tinh Dầu</a>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Đèn xông tinh dầu nến</a></p>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Đèn xông tinh dầu điện</a></p>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Xà Bông Thiên Nhiên</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Dầu Massage Luxury</a>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Dầu Nền, Dầu Dẫn </a></p>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Dầu massage cơ thể</a></p>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Dầu dưỡng da mặt</a></p>
+                                            <p><a href="#">&nbsp;&nbsp;&nbsp; &raquo; Dầu dưỡng tóc, mọc tóc</a></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="ul_menu_pc_border">
+                                    <a title="Kinh nghiệm" href="#">Kinh nghiệm </a>
+                                </li>
+                                <li class="ul_menu_pc_border">
+                                    <a title="Hỗ trợ" href="#">Hỗ trợ </a>
+                                    <ul class="mn_child ul_menu_pc_ul">
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Hướng dẫn mua hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Hướng dẫn thanh toán</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Phương thức giao hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Thông tin khuyến mãi</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Cách dùng đèn xông tinh dầu</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Chính sách đổi trả</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Bảng giá máy khuếch tán</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">&nbsp;&raquo; Bảng giá bán lẻ tinh dầu</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="ul_menu_pc_border">
+                                    <a title="Liên hệ" href="#">Liên hệ </a>
+                                </li>
+                            </ul>
+                            <ul class="ul_menu_mb" id="none_display_pc">
+                                <li>
+                                    <a href="#"><strong>Menu</strong></a>
+                                    <ul class="mn_child ul_menu_mb_ul">
+                                        <li><a href="#" title="Trang chủ">Trang chủ</a></li>
+                                        <li><a title="Giới thiệu" href="#">Giới thiệu</a></li>
+                                        <li><a title="Sản phẩm" href="#">Sản phẩm</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Tinh Dầu Nguyên Chất</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Tinh Dầu Thơm Que Gỗ</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Máy Khuếch Tán Tinh Dầu</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Đèn Xông Tinh Dầu</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Xà Bông Thiên Nhiên</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Dầu Massage Luxury</a></li>
+                                        <li><a title="Kinh nghiệm" href="#">Kinh nghiệm</a></li>
+                                        <li><a title="Hỗ trợ" href="#">Hỗ trợ</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Hướng dẫn mua hàng</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Hướng dẫn thanh toán</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Phương thức giao hàng</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Thông tin khuyến mãi</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Cách dùng đèn xông tinh dầu</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Chính sách đổi trả</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Bảng giá máy khuếch tán</a></li>
+                                        <li><a href="#">&nbsp;&raquo; Bảng giá bán lẻ tinh dầu</a></li>
+                                        <li><a title="Liên hệ" href="#">Liên hệ</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div id="none_display_pc" class="div_menu_drop" style="display:none">
+                                <select name="one_boloc" id="one_boloc" onChange="MM_jumpMenu('parent',this,0)">
+                                    <option value="#">
+                                        <strong>Trang chủ</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>Giới thiệu</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>Sản phẩm</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Tinh Dầu Nguyên Chất</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Tinh Dầu Thơm Que Gỗ</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Máy Khuếch Tán Tinh Dầu</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Đèn Xông Tinh Dầu</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Xà Bông Thiên Nhiên</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Dầu Massage Luxury</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>Kinh nghiệm</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>Hỗ trợ</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Hướng dẫn mua hàng</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Hướng dẫn thanh toán</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Phương thức giao hàng</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Thông tin khuyến mãi</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Cách dùng đèn xông tinh dầu</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Chính sách đổi trả</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Bảng giá máy khuếch tán</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>&raquo; Bảng giá bán lẻ tinh dầu</strong>
+                                    </option>
+                                    <option value="#">
+                                        <strong>Liên hệ</strong>
+                                    </option>
+                                </select>
+                                <style type="text/css">
+                                    .div_menu_drop {
+                                        margin: 5px 0% 5px 0%;
+                                        width: 100%;
+                                        float: left;
+                                    }
+
+                                        .div_menu_drop select {
+                                            width: 100%;
+                                            border: 1px solid #ECE8E8;
+                                            border-radius: 3px;
+                                            padding: 10px;
+                                            color: #FFF;
+                                            float: left;
+                                            background: #333 !important;
+                                            line-height: 25px
+                                        }
+                                </style>
+
+                                <script type="text/javascript" charset="utf-8">
+                                    function MM_jumpMenu(targ, selObj, restore) {
+                                        eval(targ + ".location='" + selObj.options[selObj.selectedIndex].value + "'"); if
+                                            (restore) selObj.selectedIndex = 0;
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- gio hang -->
+    <section class="section_all" id="page_bg">
+        <div class="div_index" id="page_width">
+            <article class="article_center">
+                <div class="index_info">
+                    <div style="padding:10px;font-weight: bold;font-size: 20px;">
+                        THÔNG TIN GIAO HÀNG
+                    </div>
+                </div>
+            </article>
+            <div class="index_1">
+                <form name="frm_update_cart" method="post" enctype="multipart/form-data">
+                    <input name="numitem" value="2" type="hidden">
+                    <div class="dita_cat_info">
+                        <h3 style="text-transform:uppercase;">Thông tin giao hàng </h3>
+                        <div class="dita_cat_left" id="dita_cat_left">
+                            <ul>
+                                <li><input type="text" id="firstname" name="firstname" size="50" value="" placeholder="Họ và Tên *" class="dita_input_350 dita_input_width">	</li>
+                                <li><input type="text" id="mobile" name="mobile" size="50" value="" placeholder="Điện Thoại *" class="dita_input_350 dita_input_width" onkeyup="valid(this,'notnumbers')" maxlength="20"></li>
+                                <li><input type="text" id="address" name="address" size="50" value="" placeholder="Địa Chỉ  *" class="dita_input_350 dita_input_width"></li>
+                                <li>
+                                    <select name="namecity" id="namecity" class="dita_input_cart dita_input_width" onchange="pb_display(this.value);">
+                                        <option value="">Chọn Tỉnh Thành &nbsp;*</option>
+                                        <option value="1">Hồ Chí Minh</option>
+                                        <option value="2">Hà Nội</option>
+                                        <option value="3">Đồng Nai</option>
+                                        <option value="4">Bình Dương</option>
+                                        <option value="5">Tây Ninh</option>
+                                        <option value="6">Long An</option>
+                                        <option value="7">Tiền Giang</option>
+                                        <option value="8">Cần Thơ</option>
+                                        <option value="9">An Giang</option>
+                                        <option value="10">Sóc Trăng</option>
+                                        <option value="11">Kiên Giang</option>
+                                        <option value="12">Vĩnh Long</option>
+                                        <option value="13">Bạc Liêu</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <div id="huyen">
+                                        <select name="district" id="district" class="dita_input_cart dita_input_width">
+                                            <option value="">Chọn Quận Huyện</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li><textarea cols="76" rows="10" name="note" id="note" class="dita_input_350 dita_input_width" placeholder="Ghi Chú (Giá tinh dầu mặc định là 10ml, ghi chú tại đây nếu muốn mua tinh dầu size lớn hơn, giá chi tiết xem trong mục mô tả sản phẩm trên website)" style="height:100px" maxlength="200"></textarea></li>
+                                <li>
+                                    <input type="hidden" id="thanhtoan" name="thanhtoan" value="1">
+                                    <input type="submit" name="btn_submit" id="btn_submit" value="Mua hàng" class="dita_register_login" onclick="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dita_cat_right" id="dita_cat_left">
+                            <!--don hang-->
+                            <table border="1" cellpadding="0" cellspacing="0" width="100%" class="dita_border_solid">
+                                <tbody>
+                                    <tr class="dita_td_cart">
+                                        <td align="center" id="display_cat_img" style="max-width:100px !important">Hình</td>
+                                        <td align="center">Tên sản phẩm</td>
+                                    </tr>
+                                    <tr id="box_cart">
+                                        <td align="center" class="dita_td_info" id="display_cat_img" style="max-width:110px !important">
+                                            <a href="chitietsanpham.html">
+                                                <img src="image/PR1223_may-khuech-tan-tinh-dau-cam-tu-cau-mkt20-1.jpg" alt="Máy khuếch tán tinh dầu MKT20-H cẩm tú cầu hồng" style="max-width:100px; width:100%">
+                                            </a>
+                                            
+                                        </td>
+                                        <td class="dita_td_info" valign="top">
+                                            <p><a href="chitietsanpham.html">Máy khuếch tán tinh dầu MKT20-H cẩm tú cầu hồng</a></p>
+                                            <p>Giá bán: <strong>650,000 Đ &nbsp;</strong></p>
+                                            <p>
+                                                Số lượng :
+                                                <select name="Amount" class="dita_cart_input">
+                                                    <option value="">2</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                    <option value="">4</option>
+                                                    <option value="">5</option>
+                                                    <option value="">6</option>
+                                                    <option value="">7</option>
+                                                    <option value="">8</option>
+                                                    <option value="">9</option>
+                                                    <option value="">10</option>
+                                                </select>
+                                            </p>
+                                            <p>Thành tiền: <strong>1,300,000Đ  &nbsp; </strong></p>
+                                            <p> <a href="#"><span>» Xóa</span></a></p>
+                                        </td>
+                                    </tr>
+                                    <input type="hidden" name="userid_u" value="">
+                                    <input type="hidden" name="firstname_u" value="">
+                                    <!--<input type="hidden" name="email_u" value="" >-->
+                                    <input type="hidden" name="mobile_u" value="">
+                                    <input type="hidden" name="news_id" value="254">
+                                    <input type="hidden" name="news_name" value="Máy khuếch tán tinh dầu MKT20-H cẩm tú cầu hồng">
+                                    <input type="hidden" name="gia_ban" value="650,000">
+                                    <tr id="box_cart">
+                                        <td align="center" class="dita_td_info" id="display_cat_img" style="max-width:110px !important">
+                                            <img src="image/PR0916_tinh-dau-bac-ha.jpg" alt="Tinh dầu Bạc Hà tinh chất" style="max-width:100px; width:100%">
+                                        </td>
+                                        <td class="dita_td_info" valign="top">
+                                            <p><a href="#" target="_blank">Tinh dầu Bạc Hà tinh chất</a></p>
+                                            <p>Giá bán: <strong>85,000 Đ &nbsp;</strong></p>
+                                            <p>
+                                                Số lượng :
+                                                <select name="Amount" class="dita_cart_input" onchange="MM_jumpMenu('parent',this,0)">
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                    <option value="">4</option>
+                                                    <option value="">5</option>
+                                                    <option value="">6</option>
+                                                    <option value="">7</option>
+                                                    <option value="">8</option>
+                                                    <option value="">9</option>
+                                                    <option value="">10</option>
+                                                </select>
+                                            </p>
+                                            <p>Thành tiền: <strong>85,000Đ  &nbsp; </strong></p>
+                                            <p> <a href="#"><span>» Xóa</span></a></p>
+                                        </td>
+                                    </tr>
+                                    <input type="hidden" name="userid_u" value="">
+                                    <input type="hidden" name="firstname_u" value="">
+                                    <!--<input type="hidden" name="email_u" value="" >-->
+                                    <input type="hidden" name="mobile_u" value="">
+                                    <input type="hidden" name="news_id" value="8">
+                                    <input type="hidden" name="news_name" value="Tinh dầu Bạc Hà tinh chất">
+                                    <input type="hidden" name="gia_ban" value="85,000">
+                                    <tr>
+                                        <td colspan="2" align="left">
+                                            <div style="float:left; border:0px solid #F00; width:100%; height:auto; ">
+                                                <div style="float:left; padding:10px">
+                                                </div>
+                                                <div style="float:right; padding:10px; min-width:350px">
+                                                    <table class="table_shipping">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="right" width="200">Tổng giá trị thanh toán:</td>
+                                                                <td align="left">
+                                                                    <input type="hidden" name="tong_tien_cat" value="1,385,000">
+                                                                    <strong>1,385,000 Đ</strong>
+                                                                    <p style="color:darkred;">Lưu ý: HSV chỉ nhận ship với đơn hàng tối thiểu &gt; 100.000vnđ </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="table_shipping" id="fee_shipping">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="right" width="200">Phí Giao Hàng:</td>
+                                                                <td align="left">
+                                                                    <span> Phí ship 20.000đ - 40.000đ tùy khu vực, nhân viên của HSV sẽ liên hệ để báo cụ thể cho khách hàng</span>
+                                                                    <p>Miễn phí ship cho đơn hàng &gt;500.000đ tại nội thành HCM, HN và &gt;800.000đ tại ngoại tỉnh </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--end don hang-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-------------------------------------Footer--------------------------------------------->
+    <style type="text/css">
+        @media (min-width: 980px) {
+            .margin_kh {
+                margin-bottom: -35px !important;
+                margin-top: 20px
+            }
+        }
+    </style>
+    <section class="section_all " id="page_bg">
+        <div class="div_index" id="page_width">
+            <article class="article_center">
+                <div class="index_info" style="margin-bottom:-50px; z-index:0; position:relative;">
+                    <div class="index_1" style="margin-bottom:0px">
+                        <ul class="ul_menu_footer">
+                            <li>
+                                <a title="Hướng dẫn mua hàng" href="#"><span>&bull; Hướng dẫn mua hàng</span></a>
+                            </li>
+                            <li>
+                                <a title="Hướng dẫn thanh toán" href="#"><span>&bull; Hướng dẫn thanh toán</span></a>
+                            </li>
+                            <li>
+                                <a title="Phương thức giao hàng" href="#"><span>&bull; Phương thức giao hàng</span></a>
+                            </li>
+                            <li>
+                                <a title="Thông tin khuyến mãi" href="#"><span>&bull; Thông tin khuyến mãi</span></a>
+                            </li>
+                            <li>
+                                <a title="Cách dùng đèn xông tinh dầu" href="#"><span>&bull; Cách dùng đèn xông tinh dầu</span></a>
+                            </li>
+                            <li>
+                                <a title="Chính sách đổi trả" href="#"><span>&bull; Chính sách đổi trả</span></a>
+                            </li>
+                            <li>
+                                <a title="Bảng giá máy khuếch tán" href="#"><span>&bull; Bảng giá máy khuếch tán</span></a>
+                            </li>
+                            <li>
+                                <a title="Bảng giá bán lẻ tinh dầu" href="#"><span>&bull; Bảng giá bán lẻ tinh dầu</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="section_all footer_full" id="page_bg">
+        <div class="div_index" id="page_width">
+            <article class="article_center">
+                <div class="index_info footer_full">
+                    <div class="index_footer"> </div>
+                    <div class="index_footer footer_all" style="height:150px">
+                        <div class="index_footer_right" style="text-align:right">
+                            <style type="text/css">
+                                #fb-root {
+                                    display: none;
+                                }
+
+                                .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+                                    width: 100% !important;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section class="section_all" id="page_bg">
+        <div class="div_index" id="page_width">
+            <article class="article_center">
+                <div class="index_info">
+                    <div class="index_1">
+                        <p style="float:left; padding:15px 0px">Copyright (C) 2021 <strong style="color:green !important"></strong>All Rights Reserved</p>
+                        <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-------------------------------------Footer--------------------------------------------->
+</body>
+<div>
+    <a href="https://m.me/doanvu2000/" title="Gửi tin nhắn qua Facebook" class="fb-button" target="_blank" rel="nofollow">
+        <div class="bubble">1</div>
+        <div class="bubble-msg">Bạn Cần Hỗ Trợ?</div>
+    </a>
+</div>
+</html>

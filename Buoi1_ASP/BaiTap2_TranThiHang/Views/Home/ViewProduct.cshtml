@@ -1,0 +1,50 @@
+﻿@model BaiTap2_TranThiHang.Models.Product
+
+@{
+    ViewBag.Title = "ViewProduct";
+}
+
+<h2>ViewProduct</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MASP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MASP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

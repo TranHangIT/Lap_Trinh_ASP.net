@@ -1,0 +1,59 @@
+﻿
+<header id="header" class="fixed-top">
+    <div class="p1">
+        <div class="container d-flex align-items-center">
+            <a href="@Url.Action("Index","Home")" class="logo me-auto"><img src="~/wwwroot/img/logos/logo1.png" alt="" width="100%" height="100%"></a>
+
+        </div>
+    </div>
+    <div class="p2">
+        <ul id="menu">
+            <div class="inner">
+                <div class="header-navbar-wrapper">
+                    <div class="header-navbar text-right">
+                        <ul class="no-bullets">
+                            <li><a href="@Url.Action("Index", "Home")"><span>TRANG CHỦ</span></a></li>
+                            <li><a href="@Url.Action("XemSanPhamTheoDanhMuc", "SanPham")"><span>XE NHẬP KHẨU</span></a></li>
+                            <li><a href="@Url.Action("XemSanPhamTheoDanhMuc", "SanPham")"><span>HONDA</span></a></li>
+                            <li><a href="@Url.Action("XemSanPhamTheoDanhMuc", "SanPham")"><span>YAMAHA</span></a></li>
+                            <li><a href="@Url.Action("XemSanPhamTheoDanhMuc", "SanPham")"><span>SUZUKI</span></a></li>
+                            <li><a href="@Url.Action("XemSanPhamTheoDanhMuc", "SanPham")"><span>SYM</span></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div></div>
+    <nav id="navbar" class="navbar order-last order-lg-0">
+
+
+        <a class="nav-link scrollto search">
+            <form>
+                <input type="text" name="txtKeyword" style="border-radius: 15px;" placeholder="Tìm kiếm ..." />
+                <i class="fas fa-search icons" style="font-size: 20px;margin-left: 0px; "></i>
+            </form>
+        </a>
+
+        <!-- <li><a class="nav-link scrollto" href="#">
+                <i class="fas fa-user icons"></i>
+            </a>
+        </li> -->
+
+
+        <ul class="dropdown" style="margin-left: -20px;">
+            <a href="#"><span><i class="fas fa-user icons"></i></span></a>
+            <ul>
+                <li>@Html.ActionLink("ĐĂNG NHẬP", "Dangnhap", "TaiKhoan")</li>
+                <li>@Html.ActionLink("ĐĂNG KÝ", "DangKy", "TaiKhoan")</li>
+                <li>@Html.ActionLink("ĐỔI MẬT KHẨU", "DoiMatKhau", "TaiKhoan")</li>
+                <li>@Html.ActionLink("SỬA TÀI KHOẢN", "SuaTaiKhoan", "TaiKhoan")</li>
+                <li>@Html.ActionLink("ĐĂNG XUẤT", "Index", "Home")</li>
+
+            </ul>
+        </ul>
+
+        <a href="@Url.Action("GioHang","SanPham")"><i class="fas fa-cart-plus icons"></i></a>
+        <!-- .navbar -->
+    </nav>
+
+</header>

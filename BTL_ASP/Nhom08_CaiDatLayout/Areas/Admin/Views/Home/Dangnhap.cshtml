@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Thiết lập chung -->
+    @{
+        Html.RenderPartial("_TitleHeadAdmin");
+    }
+
+    <!-- File CSS Login -->
+    <link href="~/Areas/Admin/Assets/css/login.css" rel="stylesheet">
+
+
+
+</head>
+
+<!--Coded with love by Mutiullah Samim-->
+
+<body>
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="card shadow-lg border-0 rounded-lg mt-5">
+                        <div class="card-header ">
+                            <div style="width: 40%; margin: 0 auto;" class=" mt-2 ">
+                                <img src="~/Areas/Admin/Assets/img/header_1.jpg" alt="" style="width: 100%">
+                            </div>
+                            <p style="font-size: 15px; color: #BDBDBD;" class="mt-5">Truy cập trang quản trị</p>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label class="small mb-1" for="inputUserName">Tên đăng nhập:</label>
+                                    <input class="form-control " id="inputUserName" type="username"
+                                           placeholder="Nhập tên đăng nhập" />
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label class="small mb-1" for="inputPassword">Mật khẩu:</label>
+                                    <input class="form-control " id="inputPassword" type="password"
+                                           placeholder="Nhập mật khẩu" />
+                                </div>
+
+                                <div class="form-group mt-5">
+                                    <a href="@Url.Action("Index","Home")">
+                                        <button type="button" class="btn btn-success" style="width: 100%;">
+                                            <h5>Đăng nhập</h5>
+                                        </button>
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
